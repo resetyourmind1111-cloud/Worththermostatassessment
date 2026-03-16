@@ -450,7 +450,7 @@
     <div class="thankyou-screen">
       <div class="check">✓</div>
       <h2>Permission Granted.</h2>
-      <p>Your personalized reset plan is being prepared. A new tab is opening now — enter your email there to receive your complete results and reset plan straight to your inbox. 🌡️</p>
+      <p>Your Worth Thermostat results and personalized reset plan are on their way to your inbox. Check your email in the next few minutes. 🌡️</p>
       <p style="font-size:13px;color:var(--muted);margin-bottom:32px">Don't see it? Check your spam folder and mark us as safe.</p>
       <a href="https://forms.gle/veohns8QVRKubMCm9" target="_blank" style="text-decoration:none">
         <button class="btn-primary">Access the App Now →</button>
@@ -708,11 +708,11 @@ function submitForm(e) {
     formData.append('selfcare_score', r.sectionScores[3] + '/25');
     formData.append('action_score', r.sectionScores[4] + '/25');
   }
-  fetch('https://api.web3forms.com/submit', {method:'POST',body:formData}).catch(function(){});
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData
+  }).catch(function(){});
   showScreen('screen-thankyou');
-  setTimeout(function() {
-    window.open('https://preview.mailerlite.io/forms/2196162/182111259097826304/share', '_blank');
-  }, 2000);
 }
 
 function retakeAssessment() {
