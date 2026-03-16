@@ -1,2 +1,0 @@
-# Worththermostatassessment
-Worth thermostat assessment 
